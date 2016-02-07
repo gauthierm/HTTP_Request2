@@ -1,7 +1,5 @@
 language: php
-sudo: false
 php:
-  - 5.2
   - 5.3
   - 5.4
   - 5.5
@@ -12,6 +10,7 @@ addons:
     - hr2.local
     - www.hr2.local
 before_script:
+  - pear config-show
   # directory for apache logs
   - mkdir -p $TRAVIS_BUILD_DIR/logs
   # As described @ http://docs.travis-ci.com/user/languages/php/#Apache-%2B-PHP
